@@ -2,7 +2,7 @@
 	import myImage from '$lib/assets/images/me.png?h=360&w=720&webp';
 </script>
 
-<div class="h-screen md:h-2/3">
+<div class="h-screen md:h-2/3 px-16 bg-gradient-to-l from-teal-200">
 	<div class="flex flex-col md:flex-row items-center px-16 h-full w-full">
 		<div class="flex-1 flex-col text-center md:text-start p-16 md:p-0 w-full">
 			<div class="text-7xl">
@@ -37,6 +37,12 @@
 				class="w-2/5 rounded-b-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 grayscale"
 				alt="myself"
 			/>
+		</div>
+		<div class="flex-none flex flex-col w-20 items-end">
+			<div class="text-4xl text-end font-semibold">6+</div>
+			<div class="text-2xl text-end font-light">Years of experience</div>
+			<div class="text-4xl text-end pt-16 font-semibold">20+</div>
+			<div class="text-2xl text-end font-light">Projects done</div>
 		</div>
 	</div>
 </div>
