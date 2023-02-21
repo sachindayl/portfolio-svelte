@@ -5,7 +5,7 @@
 	export let isReverse: boolean;
 </script>
 
-<div class="flex  items-center px-16">
+<div class="flex  items-center">
 	{#if isReverse}
 		<div class="flex-1 flex flex-col">
 			<div class="text-5xl">{project.name}</div>
@@ -14,9 +14,9 @@
 			</div>
 			<div class="font-light">
 				Built with:
-				{#each project.tools as tool}
+				{#each project.tools as tool, i}
 					<span class="font-semibold">
-						{tool}
+						{tool}{i !== project.tools.length - 1 ? ',' : ''}
 					</span>
 				{/each}
 			</div>
@@ -35,9 +35,9 @@
 			</div>
 			<div class="font-light">
 				Built with:
-				{#each project.tools as tool}
+				{#each project.tools as tool, i}
 					<span class="font-semibold">
-						{tool}
+						{tool}{i !== project.tools.length - 1 ? ',' : ''}
 					</span>
 				{/each}
 			</div>
