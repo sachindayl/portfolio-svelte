@@ -14,9 +14,9 @@
 			</div>
 			<div class="font-light">
 				Built with:
-				{#each project.tools as tool}
+				{#each project.tools as tool, i}
 					<span class="font-semibold">
-						{tool}
+						{tool}{i !== project.tools.length - 1 ? ',' : ''}
 					</span>
 				{/each}
 			</div>
@@ -35,9 +35,9 @@
 			</div>
 			<div class="font-light">
 				Built with:
-				{#each project.tools as tool}
+				{#each project.tools as tool, i}
 					<span class="font-semibold">
-						{tool},
+						{tool}{i !== project.tools.length - 1 ? ',' : ''}
 					</span>
 				{/each}
 			</div>

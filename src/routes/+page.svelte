@@ -4,6 +4,7 @@
 	import Projects from '../views/Projects.svelte';
 	import type { PageServerData } from '../../.svelte-kit/types/src/routes/$types';
 	import Tools from '../views/Tools.svelte';
+	import Resume from '../views/Resume.svelte';
 
 	export let data: PageServerData;
 </script>
@@ -12,5 +13,6 @@
 	<NavBar />
 	<Hero />
 	<Projects projects={data.projects} />
-	<Tools />
+	<Tools toolsList={data.tools} />
+	<Resume />
 </div>
