@@ -15,6 +15,6 @@
 	<NavBar />
 	<Hero />
 	<Projects projects={data.projects} />
-<!--	<Tools toolsList={data.tools} />-->
+	<Tools toolsList={data.tools} />
 	<Resume resumeItemsList={experienceData}/>
 </div>

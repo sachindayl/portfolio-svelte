@@ -3,14 +3,10 @@
 	import { fade } from 'svelte/transition';
 	import type { ProjectI } from '../models/ProjectI';
 	import { scrollRef } from 'svelte-scrolling';
-	import { browser } from '$app/environment';
 
 	export let projects: [ProjectI];
 	let showCount = 2;
 	let isVisible = true;
-	let isMobile = browser
-		? window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-		: false;
 
 	function onReadMorePress() {
 		// isVisible = false;
@@ -21,18 +17,14 @@
 	}
 </script>
 
-<div use:scrollRef={'projects'} class="flex justify-center items-center flex-col w-full">
-	<div class="flex justify-center w-full text-4xl md:text-5xl font-semibold pt-16">Projects</div>
+<div class="flex justify-center items-center flex-col w-full">
+	<div use:scrollRef={'projects'} class="flex justify-center w-full text-4xl md:text-5xl font-semibold pt-16">Projects</div>
 	{#key showCount}
 		{#if isVisible}
 			<div class=" items-center  space-y-8 md:w-2/3 py-16" transition:fade={{ duration: 400 }}>
 				{#each projects as project, i}
 					{#if i < showCount}
-						<ProjectCard
-							{project}
-							isReverse={browser && i % 2 === 0}
-							isMobile={isMobile}
-						/>
+						<ProjectCard {project} isReverse={ i % 2 === 0} />
 					{/if}
 				{/each}
 			</div>

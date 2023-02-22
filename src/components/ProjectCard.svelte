@@ -1,17 +1,15 @@
 <script lang="ts">
 	import phone from '$lib/assets/images/22-removebg-preview.png';
-	import type { ProjectI } from '../models/ProjectI';
-	import {browser} from "$app/environment";
+	import type {ProjectI} from '../models/ProjectI';
 
 	export let project: ProjectI;
 	export let isReverse: boolean;
-	export let isMobile: boolean;
 </script>
 
 <div class="flex flex-col md:flex-row justify-center  items-center w-full">
 	<div class="order-2 {isReverse ? 'md:order-first' : 'md:order-last' } flex-1 flex flex-col p-4 md:px-0 {isReverse? 'md:pr-16': 'md:pl-16'}">
 			<div class="text-3xl md:text-5xl text-center {isReverse? 'md:text-start': 'md:text-end'}">{project.name}</div>
-			<div class="text-lg pt-4 pb-2 font-light text-center {isReverse? 'md:text-start': 'md:text-end'} }text-left">
+			<div class="text-lg pt-4 pb-2 font-light text-center {isReverse? 'md:text-start': 'md:text-end'} text-left">
 				{project.description}
 			</div>
 			<div class="font-light text-sm text-center {isReverse? 'md:text-start': 'md:text-end'}">
