@@ -6,12 +6,12 @@
 	export let toolsList: [ToolI];
 </script>
 
-<div use:scrollRef={'tools'} class="h-3/5 bg-teal-800 px-32">
-	<div class="flex justify-between h-full">
+<div use:scrollRef={'tools'} class="h-full md:h-3/5 bg-teal-800 px-32">
+	<div class="flex flex-col md:flex-row justify-between h-full">
 		<div class="flex justify-center items-center w-full">
 			<div class="flex-1 flex flex-col justify-start items-start p-4">
-				<div class="text-4xl text-white pb-8">Tools and Languages</div>
-				<div class="text-xl text-white">
+				<div class="text-2xl md:text-4xl text-white pb-8">Tools and Languages</div>
+				<div class="text-lg md:text-2xl text-white">
 					As a developer with knowledge in multiple platforms, I am familiar with many languages and
 					tools
 				</div>

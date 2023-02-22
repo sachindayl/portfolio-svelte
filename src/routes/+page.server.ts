@@ -33,7 +33,7 @@ export const load = (() => {
 			{
 				name: 'Ward 11',
 				description:
-					"Ward 11 is the ideal hybrid (iOS, Android) app for hospital wards looking to streamline their patient data entry and management processes. Whether you're a doctor, or other hospital staff member, this app will help you provide better care by providing up-to-date patient information.",
+					"Ward 11 is the ideal hybrid (iOS, Android) app for hospital wards looking to streamline their patient data entry and management processes. Whether you're a doctor, or a hospital staff member, this app will help you provide better care by providing up-to-date patient information.",
 				tools: ['Flutter', 'Firebase Authentication', 'Firebase NoSQL DB']
 			}
 		],

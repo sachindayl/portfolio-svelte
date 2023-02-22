@@ -8,6 +8,9 @@
 	export let projects: [ProjectI];
 	let showCount = 2;
 	let isVisible = true;
+	let isMobile = browser
+		? window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+		: false;
 
 	function onReadMorePress() {
 		// isVisible = false;
@@ -27,10 +30,8 @@
 					{#if i < showCount}
 						<ProjectCard
 							{project}
-							isReverse={browser &&
-								(window.matchMedia('only screen and (max-width: 760px)').matches
-									? false
-									: i % 2 === 0)}
+							isReverse={browser && i % 2 === 0}
+							isMobile={isMobile}
 						/>
 					{/if}
 				{/each}
