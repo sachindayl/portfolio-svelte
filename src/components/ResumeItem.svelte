@@ -1,5 +1,26 @@
 <script lang="ts">
+	import type { ExperienceI } from '../models/ExperienceI';
 
+	export let experienceItem: ExperienceI;
 </script>
 
-<div></div>
+<div>
+	<div class="flex-start flex items-center">
+		<div
+			class="-ml-[9px] mr-3 -mt-2 flex h-4 w-4 items-center justify-center rounded-full bg-teal dark:bg-teal-500"
+		/>
+		<h4 class="-mt-2 text-2xl font-semibold">{experienceItem.position} <span class="pl-4 font-light text-lg opacity-70">{experienceItem.workplace}</span></h4>
+	</div>
+	<div class="ml-6 mb-2 pb-6">
+		<a href="#!" class="text-sm text-black font-light transition duration-150 ease-in-out hover:text-teal-600"
+			>{experienceItem.timePeriod}</a
+		>
+		<ul class="list-disc mt-2 text-black">
+			{#each experienceItem.tasks as task}
+				<li class="opacity-80">
+					{task}
+				</li>
+			{/each}
+		</ul>
+	</div>
+</div>

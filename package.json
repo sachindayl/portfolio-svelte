@@ -31,5 +31,8 @@
 		"vite": "^4.0.0",
 		"vite-imagetools": "^4.0.18"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"pdfjs-dist": "^3.3.122"
+	}
 }
