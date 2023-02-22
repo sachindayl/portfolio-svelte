@@ -17,12 +17,12 @@
 	}
 </script>
 
-<div use:scrollRef={'resume'} class="container mx-auto w-full p-16">
-	<div class="flex justify-center w-full pb-8 text-5xl font-semibold">Resume</div>
+<div use:scrollRef={'resume'} class="container mx-auto w-full p-8 md:p-16">
+	<div class="flex justify-center w-full pb-8 text-4xl md:text-5xl font-semibold">Resume</div>
 	{#key showCount}
 		{#if isVisible}
 			<div
-				class="p-16 rounded-2xl border border-teal-600 shadow-lg shadow-teal-600"
+				class="p-4 md:p-16 rounded-2xl border border-teal-600 shadow-lg shadow-teal-600"
 				transition:fade={{ duration: 400 }}
 			>
 				<ol class="flex flex-col justify-center border-l-2 border-teal dark:border-teal-600 ">
@@ -35,7 +35,7 @@
 					{/each}
 				</ol>
 				{#if showCount < resumeItemsList.length}
-					<div class="flex justify-center pt-16">
+					<div class="flex justify-center pb-4 pt-4 md:pt-16">
 						<button
 							type="button"
 							class="inline-block rounded bg-teal-600 px-4 pt-[6px] pb-[5px] text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
