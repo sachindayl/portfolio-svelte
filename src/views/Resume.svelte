@@ -1,50 +1,68 @@
-<div class="container bg-gray-200 mx-auto w-full h-full">
-  <div class="relative wrap overflow-hidden p-10 h-full">
-    <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-    <!-- right timeline -->
-    <div class="mb-8 flex justify-between items-center w-full right-timeline">
-      <div class="order-1 w-5/12"></div>
-      <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
-      </div>
-      <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-        <h3 class="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
-        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </div>
-    </div>
-    <!-- left timeline -->
-    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-      <div class="order-1 w-5/12"></div>
-      <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-        <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-      </div>
-      <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-        <h3 class="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
-        <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </div>
-    </div>
+<script lang="ts">
+	import ResumeItem from '../components/ResumeItem.svelte';
+	import { fade } from 'svelte/transition';
+	import type { ExperienceI } from '../models/ExperienceI';
 
-    <!-- right timeline -->
-    <div class="mb-8 flex justify-between items-center w-full right-timeline">
-      <div class="order-1 w-5/12"></div>
-      <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-      </div>
-      <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-        <h3 class="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
-        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </div>
-    </div>
-    <!-- left timeline -->
-    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-      <div class="order-1 w-5/12"></div>
-      <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-        <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
-      </div>
-      <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-        <h3 class="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
-        <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </div>
-    </div>
-  </div>
+	let showCount = 2;
+	export let resumeItemsList: [ExperienceI];
+	let isVisible = true;
+
+	function onReadMorePress() {
+		isVisible = false;
+		showCount = showCount + 2;
+		setTimeout(() => {
+			isVisible = true;
+		}, 100);
+	}
+</script>
+
+<div class="container mx-auto w-full p-16">
+	<div class="flex justify-center w-full pb-8 text-5xl font-semibold">Resume</div>
+	{#key showCount}
+		{#if isVisible}
+			<div
+				class="p-16 rounded-2xl border border-teal-600 shadow-lg shadow-teal-600"
+				transition:fade={{ duration: 400 }}
+			>
+				<ol class="flex flex-col justify-center border-l-2 border-teal dark:border-teal-600 ">
+					{#each resumeItemsList as item, i (item)}
+						{#if i < showCount}
+							<li>
+								<ResumeItem experienceItem={item} />
+							</li>
+						{/if}
+					{/each}
+				</ol>
+				{#if showCount < resumeItemsList.length}
+					<div class="flex justify-center pt-16">
+						<button
+							type="button"
+							class="inline-block rounded bg-teal-600 px-4 pt-[6px] pb-[5px] text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+							data-te-ripple-init
+							data-te-ripple-color="light"
+							on:click={() => onReadMorePress()}
+						>
+							Read more
+						</button>
+					</div>
+				{/if}
+			</div>
+		{/if}
+	{/key}
+	<!--	<div class="flex justify-center pt-16">-->
+	<!--		<button-->
+	<!--			type="button"-->
+	<!--			class="border border-teal-600 inline-block rounded bg-white text-teal-600 px-4 pt-[6px] pb-[5px] text-xs font-medium-->
+	<!--			uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out-->
+	<!--			hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]-->
+	<!--			focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]-->
+	<!--			focus:outline-none focus:ring-0 active:bg-primary-700-->
+	<!--			active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"-->
+	<!--			data-te-ripple-init-->
+	<!--			data-te-ripple-color="light"-->
+	<!--			on:click={async () => await data.streamed.downloadResume}-->
+	<!--		>-->
+	<!--			Download Resume-->
+	<!--		</button>-->
+	<!--	</div>-->
 </div>
