@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"pdfjs-dist": "^3.3.122"
+		"pdfjs-dist": "^3.3.122",
+		"svelte-scrolling": "^1.2.2"
 	}
 }

@@ -2,6 +2,7 @@
 	import ResumeItem from '../components/ResumeItem.svelte';
 	import { fade } from 'svelte/transition';
 	import type { ExperienceI } from '../models/ExperienceI';
+	import { scrollRef } from 'svelte-scrolling'
 
 	let showCount = 2;
 	export let resumeItemsList: [ExperienceI];
@@ -16,7 +17,7 @@
 	}
 </script>
 
-<div class="container mx-auto w-full p-16">
+<div use:scrollRef={'resume'} class="container mx-auto w-full p-16">
 	<div class="flex justify-center w-full pb-8 text-5xl font-semibold">Resume</div>
 	{#key showCount}
 		{#if isVisible}

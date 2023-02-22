@@ -9,13 +9,13 @@
 	{#if isReverse}
 		<div class="flex-1 flex flex-col">
 			<div class="text-5xl">{project.name}</div>
-			<div class="text-xl py-8 font-light">
+			<div class="text-lg pt-4 pb-2 font-light text-left">
 				{project.description}
 			</div>
-			<div class="font-light">
+			<div class="font-light text-sm">
 				Built with:
 				{#each project.tools as tool, i}
-					<span class="font-semibold">
+					<span class="font-semibold text-teal-700">
 						{tool}{i !== project.tools.length - 1 ? ',' : ''}
 					</span>
 				{/each}
@@ -30,13 +30,13 @@
 	{#if !isReverse}
 		<div class="flex-1 flex flex-col items-end">
 			<div class="text-5xl">{project.name}</div>
-			<div class="text-xl py-8 font-light">
+			<div class="text-lg pt-4 pb-2 font-light text-right">
 				{project.description}
 			</div>
-			<div class="font-light">
+			<div class="font-light text-sm">
 				Built with:
 				{#each project.tools as tool, i}
-					<span class="font-semibold">
+					<span class="font-semibold text-teal-700">
 						{tool}{i !== project.tools.length - 1 ? ',' : ''}
 					</span>
 				{/each}
