@@ -14,4 +14,4 @@ EXPOSE 3100
 
 RUN echo pwd
 
-RUN npm build
+RUN npm run build
