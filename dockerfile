@@ -1,5 +1,7 @@
 FROM node:18-alpine
 
+RUN npm i -g vite
+
 WORKDIR /app
 
 COPY ./repos/portfolio-svelte/package.json ./
@@ -11,7 +13,5 @@ COPY ./repos/portfolio-svelte .
 RUN npm ci --omit=dev
 
 EXPOSE 3100
-
-CMD pwd
 
 RUN npm run build
