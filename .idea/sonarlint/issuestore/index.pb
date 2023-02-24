@@ -41,8 +41,6 @@ I
 src/app.css,f/8/f84891de375015dbc3259b098070fffaa6c0752c
 P
  src/components/ResumeItem.svelte,1/d/1dfac194c267eb60294d79dc6c9e83f6b44abcae
-I
-src/views/Projects.svelte,3/4/34700ff36b156235495b08131567104ab9e0bdd4
 L
 src/components/NavBar.svelte,8/5/85f7d4bf9661fb6fd37faa1e50cf13121939a2e1
 I
@@ -51,8 +49,8 @@ F
 src/models/ProjectI.ts,d/5/d542913bfc0d2594874f05a017fcf7b6ef67d57a
 F
 src/views/Tools.svelte,9/8/98decfee88c3ac38f653960919efe6ae1879104b
-G
-src/views/Resume.svelte,f/e/fe0f70b57d4629785bb0f158c2c3f82d328906a3
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+A
+package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
