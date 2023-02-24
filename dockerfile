@@ -1,4 +1,4 @@
-FROM node:19-alpine AS builder
+FROM node:18-alpine AS builder
 
 RUN npm i -g vite
 
@@ -20,6 +20,6 @@ RUN pwd
 
 RUN ls
 
-CMD ["node", "build"]
+CMD ["node", "build/index.js"]
 
 
