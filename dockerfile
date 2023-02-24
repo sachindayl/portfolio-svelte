@@ -2,7 +2,7 @@ FROM node:19-alpine AS builder
 
 RUN npm i -g vite
 
-WORKDIR /
+WORKDIR /app
 
 COPY ./repos/portfolio-svelte/package.json ./
 
