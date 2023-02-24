@@ -28,4 +28,6 @@ COPY --from=builder --chown=node:node /app/package.json .
 
 EXPOSE 3100
 
-RUN npm run preview
+ENV HOST=0.0.0.0 PORT=3100 NODE_ENV=production
+
+CMD ["node","build"]
