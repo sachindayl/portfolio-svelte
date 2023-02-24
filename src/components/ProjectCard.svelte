@@ -24,7 +24,7 @@
 		class="flex-1 w-full flex justify-center {isReverse ? 'md:justify-end md:skew-y-3' : 'md:justify-start md:-skew-y-3'}"
 	>
 		<div class="rounded-2xl bg-teal-600 w-80 h-80 md:w-3/4 md:h-3/4 p-4 shadow-2xl">
-			<img class="object-cover w-full h-full" src="src/lib/assets/images/{project.image}?h=720&w=480&webp" alt="phone" />
+			<img class="object-cover w-full h-full" src="assets/images/{project.image}?h=720&w=480&webp" alt="phone" />
 		</div>
 	</div>
 
