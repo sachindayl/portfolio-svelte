@@ -28,4 +28,4 @@ COPY --from=builder --chown=node:node /app/package.json .
 
 EXPOSE 3100
 
-CMD ["node", "build"]
+RUN npm run preview
