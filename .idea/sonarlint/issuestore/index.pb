@@ -7,9 +7,6 @@ Q
 !static/assets/images/linkedin.svg,b/5/b573aa6d8bbcf0341116f97584ac2dbd9d6bd3d0
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 O
 static/assets/images/kotlin.svg,f/8/f8e7a923d40dc8f0fd79d7f4f459ff31b706b462
 P

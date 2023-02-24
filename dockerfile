@@ -4,4 +4,6 @@ WORKDIR /app
 
 COPY ./repos/portfolio-svelte/package.json ./
 
+RUN npm install
+
 EXPOSE 3100
