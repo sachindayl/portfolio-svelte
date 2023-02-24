@@ -8,10 +8,10 @@ RUN npm install
 
 COPY ./repos/portfolio-svelte .
 
-RUN npm ci --prod
+RUN npm ci --omit=dev
 
 EXPOSE 3100
 
-CMD echo pwd
+RUN echo pwd
 
 CMD npm build
