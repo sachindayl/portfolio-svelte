@@ -12,4 +12,6 @@ RUN npm ci --prod
 
 EXPOSE 3100
 
+CMD echo pwd
+
 CMD npm build
