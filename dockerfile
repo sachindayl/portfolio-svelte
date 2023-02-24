@@ -24,8 +24,6 @@ COPY --from=builder --chown=node:node /app/build ./build
 
 COPY --from=builder --chown=node:node /app/node_modules ./node_modules
 
-COPY --from=builder --chown=node:node /app/package.json .
+COPY --chown=node:node package.json .
 
 EXPOSE 3100
-
-CMD ["node","build"]
