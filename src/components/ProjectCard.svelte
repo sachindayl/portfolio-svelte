@@ -1,6 +1,4 @@
 <script lang="ts">
-	import phone from '$lib/assets/images/22-removebg-preview.png';
-	import dough from '$lib/assets/images/doortodough.png?h=360&w=720&webp';
 	import type {ProjectI} from '../models/ProjectI';
 
 	export let project: ProjectI;

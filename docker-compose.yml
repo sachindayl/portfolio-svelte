@@ -11,3 +11,4 @@ services:
       - /home/sachinda/disks/portfolio-svelte:/app
     ports:
       - '3100:3100'
+    command: ['node', 'build']

@@ -10,4 +10,3 @@ COPY ./repos/portfolio-svelte .
 
 EXPOSE 3100
 
-RUN npm build
