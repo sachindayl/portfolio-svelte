@@ -12,6 +12,6 @@ RUN npm ci --omit=dev
 
 EXPOSE 3100
 
-RUN echo pwd
+CMD pwd
 
 RUN npm run build
