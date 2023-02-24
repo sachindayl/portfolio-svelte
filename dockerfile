@@ -8,6 +8,8 @@ RUN npm install
 
 COPY ./repos/portfolio-svelte .
 
+RUN npm ci --prod
+
 EXPOSE 3100
 
 CMD npm build
