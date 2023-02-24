@@ -16,4 +16,10 @@ RUN npm run build && npm prune --production
 
 EXPOSE 3100
 
+RUN pwd
+
+RUN ls
+
+CMD ["node", "build"]
+
 
