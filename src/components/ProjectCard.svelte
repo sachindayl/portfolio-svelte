@@ -1,5 +1,6 @@
 <script lang="ts">
 	import phone from '$lib/assets/images/22-removebg-preview.png';
+	import dough from '$lib/assets/images/doortodough.png?h=360&w=720&webp';
 	import type {ProjectI} from '../models/ProjectI';
 
 	export let project: ProjectI;
@@ -22,38 +23,11 @@
 			</div>
 		</div>
 	<div
-		class="flex-1 w-full flex justify-center {isReverse ? 'md:justify-end' : 'md:justify-start'}"
+		class="flex-1 w-full flex justify-center {isReverse ? 'md:justify-end md:skew-y-3' : 'md:justify-start md:-skew-y-3'}"
 	>
-		<div class="rounded-2xl bg-teal-600 w-64 h-64 md:w-96 md:h-96 p-4">
-			<img class="object-contain w-full h-full" src={phone} alt="phone" />
+		<div class="rounded-2xl bg-teal-600 w-80 h-80 md:w-3/4 md:h-3/4 p-4 shadow-2xl">
+			<img class="object-cover w-full h-full" src="src/lib/assets/images/{project.image}?h=720&w=480&webp" alt="phone" />
 		</div>
 	</div>
 
-
-	<!--{#if isReverse && !isMobile}-->
-	<!--	-->
-	<!--{/if}-->
-	<!--<div-->
-	<!--	class="flex-1 w-full flex justify-center {isReverse ? 'md:justify-end' : 'md:justify-start'}"-->
-	<!--&gt;-->
-	<!--	<div class="rounded-2xl bg-teal-600 w-64 h-64 md:w-96 md:h-96 p-4">-->
-	<!--		<img class="object-contain w-full h-full" src={phone} alt="phone" />-->
-	<!--	</div>-->
-	<!--</div>-->
-	<!--{#if !isReverse}-->
-	<!--	<div class="flex-1 flex flex-col items-center md:items-end pt-8 md:pt-0 px-4 md:px-0">-->
-	<!--		<div class="text-3xl md:text-5xl">{project.name}</div>-->
-	<!--		<div class="text-lg pt-4 pb-2 font-light text-center md:text-right">-->
-	<!--			{project.description}-->
-	<!--		</div>-->
-	<!--		<div class="font-light text-sm text-center md:text-right">-->
-	<!--			Built with:-->
-	<!--			{#each project.tools as tool, i}-->
-	<!--				<span class="font-semibold text-teal-700">-->
-	<!--					{tool}{i !== project.tools.length - 1 ? ',' : ''}-->
-	<!--				</span>-->
-	<!--			{/each}-->
-	<!--		</div>-->
-	<!--	</div>-->
-	<!--{/if}-->
 </div>

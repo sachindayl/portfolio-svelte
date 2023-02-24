@@ -15,12 +15,12 @@
 				<div class="text-3xl md:text-4xl text-white py-8 w-full text-center md:text-start font-semibold">
 					Tools and Languages
 				</div>
-				<div class="text-lg md:text-2xl text-white text-center md:text-start">
+				<div class="text-lg md:text-xl text-white text-center md:text-start">
 					As a developer with knowledge in multiple platforms, I am familiar with many languages and
 					tools
 				</div>
 			</div>
-			<div class="flex-1 grid grid-rows-4 md:grid-rows-3 grid-flow-col gap-8 justify-end p-4">
+			<div class="flex-1 grid grid-rows-4 md:grid-rows-3 xl:grid-rows-2 grid-flow-col gap-8 justify-end p-4">
 				{#each toolsList as toolItem}
 					<ToolItem toolName={toolItem.name} imageName={toolItem.image} />
 				{/each}

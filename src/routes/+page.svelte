@@ -11,6 +11,13 @@
 	let experienceData: [ExperienceI] = data.resume as [ExperienceI]
 </script>
 
+<svelte:head>
+	<title>Sachinda Liyanaarachchi - Portfolio</title>
+	<meta
+		name="description"
+		content="Crafting Digital Solutions for Mobile and Web: Explore the Portfolio of a Skilled Developer based in Toronto. I work on iOS, Android and Flutter projects."
+	/>
+</svelte:head>
 <div class="h-screen">
 	<NavBar />
 	<Hero />

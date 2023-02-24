@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  portfolio_svelte:
+    restart: always
+    build: .
+    volumes:
+      - /home/sachinda/disks/portfolio-svelte:/app
+    ports:
+      - '3100:3100'
+    command: ['node', 'build']
+#version: '3'
+#services:
+#  doortodough_prod:
+#    container_name: 'doortodough_prod_container'
+#    build:
+#      context: /home/sachinda
+#      dockerfile: ./repos/door-to-dough-backend/dockerfile
+#    restart: unless-stopped
+#    ports:
+#      - '3000:3000'
+#    links:
+#      - mongodatabase
+#    volumes:
+#      - /home/sachinda/disks/d2d-prod-disk:/usr/src/doortodough
+#    env_file:
+#      - .env
+#    depends_on:
+#      - mongodatabase
+#
+#  mongodatabase:
+#    container_name: 'mongo-container'
+#    build:
+#      context: /home/sachinda
+#      dockerfile: ./repos/door-to-dough-backend/mongodockerfile
+#    restart: always
+#    ports:
+#      - '27017:27017'
+#    volumes:
+#      - /home/sachinda/disks/d2d-prod-mongo:/data/mongodb
+#    env_file:
+#      - .env
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ADMIN}
+#      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ADMIN_PASSWORD}
+#      MONGO_INITDB_DATABASE: admin
+
