@@ -7,8 +7,5 @@ services:
     build:
       context: /home/sachinda
       dockerfile: ./repos/portfolio-svelte/dockerfile
-    volumes:
-      - /home/sachinda/disks/portfolio-svelte:/app
     ports:
       - '3100:3100'
-    command: ['node', 'build']
