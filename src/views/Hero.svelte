@@ -1,9 +1,10 @@
 <script>
 	import myImage from '$lib/assets/images/me.png?h=360&w=720&webp';
+	import { scrollRef } from 'svelte-scrolling'
 </script>
 
 <div class="md:h-2/3 px-0 md:px-8 bg-gradient-to-l from-teal-200">
-	<div class="container mx-auto flex flex-col md:flex-row items-center px-0 md:px-16 md:h-full w-full">
+	<div use:scrollRef={'hero'} class="container mx-auto flex flex-col md:flex-row items-center px-0 md:px-16 md:h-full w-full">
 		<div class="animate__animated animate__fadeInLeft flex-1 flex-col text-center md:text-start p-8 md:p-0 w-full">
 			<div class="text-5xl md:7xl">
 				Making the impossible possible with <span class="font-bold">Sachi:</span>

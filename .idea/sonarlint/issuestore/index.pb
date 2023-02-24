@@ -41,8 +41,6 @@ I
 src/app.css,f/8/f84891de375015dbc3259b098070fffaa6c0752c
 P
  src/components/ResumeItem.svelte,1/d/1dfac194c267eb60294d79dc6c9e83f6b44abcae
-L
-src/components/NavBar.svelte,8/5/85f7d4bf9661fb6fd37faa1e50cf13121939a2e1
 I
 src/routes/+layout.svelte,5/7/57bd45b2d1884d7c824dd9391c6e95fe5ea8b351
 F
@@ -52,5 +50,3 @@ F
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-A
-package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
