@@ -12,14 +12,22 @@ RUN npm ci
 
 COPY ./repos/portfolio-svelte .
 
-RUN npm run build && npm prune --production
+RUN npm run build
+
+FROM node:18-alpine
+
+USER node:node
+
+WORKDIR /app
+
+COPY --from=builder --chown=node:node /app/build ./build
+
+COPY --from=builder --chown=node:node /app/node_modules ./node_modules
+
+COPY --from=builder --chown=node:node /app/package.json .
+
+RUN npm prune --production
 
 EXPOSE 3100
 
-RUN pwd
-
-RUN ls
-
-CMD ["node", "index.js"]
-
-
+CMD ["node", "build"]
