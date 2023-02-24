@@ -2,6 +2,7 @@ version: '3'
 
 services:
   portfolio_svelte:
+    container_name: 'portfolio-svelte'
     restart: unless-stopped
     build:
       context: /home/sachinda
