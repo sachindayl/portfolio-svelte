@@ -6,6 +6,8 @@ WORKDIR /app
 
 COPY ./repos/portfolio-svelte/package.json ./
 
+RUN npm install
+
 RUN npm ci --omit=dev
 
 COPY ./repos/portfolio-svelte .
