@@ -7,29 +7,39 @@ export const load = (() => {
 	return {
 		projects: [
 			{
-				name: 'Door to Dough',
-				description: 'This is some information about door to dough',
-				tools: ['SwiftUI', 'Kotlin Multiplatform', 'Flutter', 'NodeJS']
-			},
-			{
-				name: 'Ward 11',
-				description: 'This is some information about ward',
-				tools: ['SwiftUI', 'Kotlin Multiplatform', 'Flutter', 'NodeJS']
-			},
-			{
 				name: 'Buonappe',
-				description: 'This is some information about buonappe',
-				tools: ['SwiftUI', 'Kotlin Multiplatform', 'Flutter', 'NodeJS']
+				description:
+					'Buonappe is a multi-user app built with Flutter designed for restaurants. It streamlines operations by allowing cooks, managers, and drivers to collaborate in real-time, improving efficiency and productivity.',
+				tools: ['Flutter', 'FastAPI', 'Firebase Authentication', 'Docker', 'NGINX'],
+				image: "buonappe.png"
 			},
 			{
 				name: 'Milysto',
-				description: 'This is some information about milysto',
-				tools: ['SwiftUI', 'Kotlin Multiplatform', 'Flutter', 'NodeJS']
+				description:
+					'Milysto is a powerful app designed for Italian shops and stalls. Built with Flutter, it features multi-user functionality for shop owners, keepers, and admins, making it easy to manage sales, inventory, and more.',
+				tools: ['Flutter', 'FastAPI', 'Firebase Authentication', 'Docker', 'NGINX'],
+				image: "milysto.png"
 			},
 			{
 				name: 'Roop',
-				description: 'This is some information about roop',
-				tools: ['SwiftUI', 'Kotlin Multiplatform', 'Flutter', 'NodeJS']
+				description:
+					'Roop is a comprehensive event management app built with Flutter for both mobile and web. It helps streamline event planning by managing scheduling, budgeting, vendors, and tasks, making it easy to organize and execute successful events.',
+				tools: ['Flutter', 'FastAPI', 'Firebase Authentication', 'Docker', 'NGINX'],
+				image: "roop.png"
+			},
+			{
+				name: 'Door to Dough',
+				description:
+					'Door to Dough is an easy-to-use recipe app built using Swiftui, Flutter, and Firebase authentication. Discover a variety of Sri Lankan and international recipes and step up your cooking game!',
+				tools: ['SwiftUI', 'Kotlin Multiplatform', 'Flutter', 'NodeJS'],
+				image: "doortodough.png"
+			},
+			{
+				name: 'Ward 11',
+				description:
+					"Ward 11 is the ideal hybrid (iOS, Android) app for hospital wards looking to streamline their patient data entry and management processes. Whether you're a doctor, or a hospital staff member, this app will help you provide better care by providing up-to-date patient information.",
+				tools: ['Flutter', 'Firebase Authentication', 'Firebase NoSQL DB'],
+				image: "ward.png"
 			}
 		],
 		tools: [
