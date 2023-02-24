@@ -26,8 +26,6 @@ COPY --from=builder --chown=node:node /app/node_modules ./node_modules
 
 COPY --from=builder --chown=node:node /app/package.json .
 
-RUN npm prune --production
-
 EXPOSE 3100
 
 CMD ["node", "build"]
