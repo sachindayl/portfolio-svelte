@@ -20,6 +20,6 @@ RUN pwd
 
 RUN ls
 
-CMD ["node", "/app/build"]
+CMD ["node", "index.js"]
 
 
