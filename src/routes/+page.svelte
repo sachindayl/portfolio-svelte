@@ -6,6 +6,12 @@
 	import Tools from '../views/Tools.svelte';
 	import Resume from '../views/Resume.svelte';
 	import type { ExperienceI } from '../models/ExperienceI';
+	import AOS from 'aos';
+	import { browser } from '$app/environment';
+
+	if (browser) {
+		AOS.init();
+	}
 
 	export let data: PageServerData;
 	let experienceData: [ExperienceI] = data.resume as [ExperienceI];
@@ -16,10 +22,6 @@
 	<meta
 		name="description"
 		content="Crafting Digital Solutions for Mobile and Web: Explore the Portfolio of a Skilled Developer based in Toronto. I work on iOS, Android and Flutter projects."
-	/>
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 	/>
 </svelte:head>
 <div class="h-screen">

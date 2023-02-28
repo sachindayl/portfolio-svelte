@@ -41,12 +41,23 @@ I
 src/app.css,f/8/f84891de375015dbc3259b098070fffaa6c0752c
 P
  src/components/ResumeItem.svelte,1/d/1dfac194c267eb60294d79dc6c9e83f6b44abcae
-I
-src/routes/+layout.svelte,5/7/57bd45b2d1884d7c824dd9391c6e95fe5ea8b351
 F
 src/models/ProjectI.ts,d/5/d542913bfc0d2594874f05a017fcf7b6ef67d57a
-F
-src/views/Tools.svelte,9/8/98decfee88c3ac38f653960919efe6ae1879104b
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+B
+docker-compose.yml,3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a
+@
+svelte.config.js,9/4/9412e23d6c9b081f2298258aff5115cc43e3308e
+=
+.dockerignore,0/5/05a721ebe3ba0754116825ed1359ff1785f4bbac
+N
+src/components/ToolItem.svelte,a/b/ab62822b698af8dbc7b409afe238277dd737aeaa
+:
+
+dockerfile,5/5/558c49b604560afd1841f2a7b49e2f60bd1f99b3
+>
+vite.config.ts,7/5/75ea7f3ea6d80d54bb5b2357996972d1632a5038
+<
+src/app.d.ts,5/0/50d669c9d022d89914a4c9c77a94171b6b438948

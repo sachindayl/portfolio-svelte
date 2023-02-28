@@ -98,13 +98,14 @@ export const load = (() => {
 				workplace: 'Technomate Software - Colombo, Sri Lanka',
 				tasks: [
 					'Delivered 8 mobile (hybrid/native) and web projects which includes multiple applications',
+					'Implemented MVVM architecture and coroutines in Android Kotlin projects',
+					'Structured the codebase with the provider and Riverpod patterns for Dart and Flutter projects',
+					'Provided functionality for REST API and GraphQL services according to the guidelines',
 					'Helped to build brands that includes logo designing and theming',
-					'Gathered requirements to design product architectures and structures',
-					'Published applications on App Store and Play Store for clients',
-					'Implemented Material and Apple design patterns in various applications',
+					'Published applications on Apple App Store and Google Play Store',
+					'Designed Material and Apple patterns in various applications',
 					'Added Firebase authentication (social/email) which secures the backend with access tokens for multiple roles',
-					'Implemented MVVM and provider pattern in Kotlin and Dart',
-					'Managed projects using Notion and code version control using Github'
+					'Managed code version control and reviewing on Github'
 				],
 				timePeriod: 'JUNE 2020 - DECEMBER 2022'
 			},

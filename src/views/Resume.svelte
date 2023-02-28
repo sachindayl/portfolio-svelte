@@ -17,7 +17,7 @@
 	}
 </script>
 
-<div use:scrollRef={'resume'} class="container mx-auto w-full p-3 md:p-16">
+<div data-aos="zoom-in"  use:scrollRef={'resume'} class="container mx-auto w-full p-3 md:p-16">
 	<div class="flex justify-center w-full pb-1 pt-4 md:pt-0 text-4xl md:text-5xl font-semibold">Resume</div>
 	<div class="flex justify-center w-full pb-8 text-sm md:text-lg font-extralight italic">Updated in 02/2023</div>
 	{#key showCount}
