@@ -17,11 +17,11 @@
 	}
 </script>
 
-<div class="flex justify-center items-center flex-col w-full">
+<div   class="flex justify-center items-center flex-col">
 	<div use:scrollRef={'projects'} class="flex justify-center w-full text-4xl md:text-5xl font-semibold pt-16">Projects</div>
 	{#key showCount}
 		{#if isVisible}
-			<div class=" items-center  space-y-8 md:w-2/3 py-16" transition:fade={{ duration: 400 }}>
+			<div data-aos="fade-up" class="flex flex-col items-center md:w-2/3 py-16" transition:fade={{ duration: 400 }}>
 				{#each projects as project, i}
 					{#if i < showCount}
 						<ProjectCard {project} isReverse={ i % 2 === 0} />
@@ -29,7 +29,7 @@
 				{/each}
 			</div>
 			{#if showCount < projects.length}
-				<div class="flex justify-center pt-4 pb-8 md:py-16">
+				<div class="flex justify-center pt-4 pb-8 md:py-16 w-full">
 					<button
 						type="button"
 						class="inline-block rounded bg-teal-600 px-4 pt-[6px] pb-[5px] text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"

@@ -3,11 +3,11 @@
 	export let toolName: string;
 </script>
 
-<div class="flex flex-col items-center w-16 md:w-20">
+<div class="flex flex-col items-center w-12 md:w-14 lg:w-20">
 	<img
-		class="object-contain w-14 h-14 md:w-20 md:h-20 pb-2"
+		class="object-contain w-10 h-10 md:w-12 md:h-12 lg:h-20 lg:w-20  pb-2"
 		src="/assets/images/{imageName}"
 		alt={toolName}
 	/>
-	<div class="text-sm md:text-xl font-light text-white text-center">{toolName}</div>
+	<div class="text-sm lg:text-xl font-light text-white text-center">{toolName}</div>
 </div>

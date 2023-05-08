@@ -5,10 +5,16 @@
 	import type { PageServerData } from '../../.svelte-kit/types/src/routes/$types';
 	import Tools from '../views/Tools.svelte';
 	import Resume from '../views/Resume.svelte';
-	import type {ExperienceI} from "../models/ExperienceI";
+	import type { ExperienceI } from '../models/ExperienceI';
+	import AOS from 'aos';
+	import { browser } from '$app/environment';
+
+	if (browser) {
+		AOS.init();
+	}
 
 	export let data: PageServerData;
-	let experienceData: [ExperienceI] = data.resume as [ExperienceI]
+	let experienceData: [ExperienceI] = data.resume as [ExperienceI];
 </script>
 
 <svelte:head>
@@ -23,5 +29,5 @@
 	<Hero />
 	<Projects projects={data.projects} />
 	<Tools toolsList={data.tools} />
-	<Resume resumeItemsList={experienceData}/>
+	<Resume resumeItemsList={experienceData} />
 </div>
