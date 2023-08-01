@@ -34,6 +34,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-node": "^1.2.0",
 		"@sveltejs/kit": "^1.5.0",
+		"@types/node": "^20.4.5",
 		"animate.css": "^4.1.1",
 		"aos": "^2.3.4",
 		"svelte-scrolling": "^1.2.2",

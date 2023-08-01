@@ -1,6 +1,4 @@
 
-M
-static/assets/images/blob.svg,c/5/c583498315c8006fd5fd7d1c9411e1b0e6250cb3
 O
 static/assets/images/github.svg,7/f/7feb40ac31148d464cb3b8ee49cd6c0dd15c7323
 Q
@@ -29,8 +27,6 @@ N
 static/assets/images/apple.svg,b/d/bdf5b05efa1ed7bcd788dba1b22734cb5cec2e58
 S
 #static/assets/images/typescript.svg,6/5/6588a39654cf35cfc976d83b45cc071a6c918505
-P
- static/assets/images/android.svg,8/5/8528b1344ca696c51ab8e5cd229618b43cc988a4
 C
 tailwind.config.cjs,a/8/a825d64fa8a4855ccb263b0423919fda9cf7e9e3
 C
@@ -41,8 +37,6 @@ I
 src/app.css,f/8/f84891de375015dbc3259b098070fffaa6c0752c
 P
  src/components/ResumeItem.svelte,1/d/1dfac194c267eb60294d79dc6c9e83f6b44abcae
-F
-src/models/ProjectI.ts,d/5/d542913bfc0d2594874f05a017fcf7b6ef67d57a
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
@@ -59,3 +53,7 @@ dockerfile,5/5/558c49b604560afd1841f2a7b49e2f60bd1f99b3
 vite.config.ts,7/5/75ea7f3ea6d80d54bb5b2357996972d1632a5038
 <
 src/app.d.ts,5/0/50d669c9d022d89914a4c9c77a94171b6b438948
+P
+ static/assets/images/android.svg,8/5/8528b1344ca696c51ab8e5cd229618b43cc988a4
+M
+static/assets/images/blob.svg,c/5/c583498315c8006fd5fd7d1c9411e1b0e6250cb3

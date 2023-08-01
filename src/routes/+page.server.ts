@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import fs from 'fs';
 
-export const csr = true;
+// export const csr = true;
 
 export const load = (() => {
 	return {
@@ -94,33 +94,31 @@ export const load = (() => {
 		],
 		resume: [
 			{
-				position: 'Co-Founder / Lead Software Developer',
-				workplace: 'Technomate Software - Colombo, Sri Lanka',
-				tasks: [
-					'Delivered 8 mobile (hybrid/native) and web projects which includes multiple applications',
-					'Implemented MVVM architecture and coroutines in Android Kotlin projects',
-					'Structured the codebase with the provider and Riverpod patterns for Dart and Flutter projects',
-					'Provided functionality for REST API and GraphQL services according to the guidelines',
-					'Helped to build brands that includes logo designing and theming',
-					'Published applications on Apple App Store and Google Play Store',
-					'Designed Material and Apple patterns in various applications',
-					'Added Firebase authentication (social/email) which secures the backend with access tokens for multiple roles',
-					'Managed code version control and reviewing on Github'
-				],
-				timePeriod: 'JUNE 2020 - DECEMBER 2022'
-			},
-			{
 				position: 'Lead Software Engineer',
 				workplace: 'Digital Yogin S.R.L. - Padova, Italy',
 				tasks: [
-					'Overlooked, maintained and developed on multiple mobile and backend projects based on Flutter/Dart and FastAPI/Python',
+					'Overlooked, maintained and developed on multiple mobile and backend projects',
+					'Implemented MVVM architecture and Hilt Dagger injecting',
+					'Familiarity with 3rd party libraries such as Retrofit, Firebase, RxJava, Coroutines',
 					'Participated in architectural and wireframe design decision making',
 					'Developed REST API services to retrieve data in JSON',
-					'Implemented separate design patterns for iOS and Android using Material and Cupertino widgets',
-					'Created database schemas and managed databases in Postgres',
-					'Deployed projects on Docker containers with Nginx reverse proxying'
+					'Implemented separate design patterns for iOS and Android',
+					'Created database schemas and managed databases in Postgres'
 				],
 				timePeriod: 'JUNE 2021 - OCTOBER 2022'
+			},
+			{
+				position: 'Co-Founder / Lead Software Developer',
+				workplace: 'Technomate Software - Colombo, Sri Lanka',
+				tasks: [
+					'Delivered multiple mobile (hybrid/native) and web projects which includes multiple application user roles',
+					'Provided functionality for REST API and GraphQL services',
+					'Understanding of designing with jetpack compose and material guidelines',
+					'Deployed projects on Docker containers with Nginx reverse proxy',
+					'Familiarity with GIT for version control on GitHub and GitLab',
+					'Familiarity on development with Agile framework'
+				],
+				timePeriod: 'JUNE 2020 - JUNE 2021'
 			},
 			{
 				position: 'Android Developer',
@@ -139,9 +137,9 @@ export const load = (() => {
 				position: 'Android Developer',
 				workplace: 'Omnitracs LLC - Towson, Maryland, USA',
 				tasks: [
-					'Involved in data transferring from package delivery trucks',
-					'Initiated a project to deliver data using RxJava data streams',
-					'Retrieved data from proprietary devices using bluetooth'
+					'Participated in a project that transfers data from delivery trucks',
+					'Initiated a project to asynchronously move data to backend servers using RxJava data streams',
+					'Retrieved data from proprietary devices using Bluetooth to mobile devices'
 				],
 				timePeriod: 'OCTOBER 2018 - MARCH 2019'
 			}

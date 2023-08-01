@@ -7,7 +7,7 @@
 	import Resume from '../views/Resume.svelte';
 	import type { ExperienceI } from '../models/ExperienceI';
 	import AOS from 'aos';
-	import { browser } from '$app/environment';
+	import { browser } from "$app/environment";
 
 	if (browser) {
 		AOS.init();
