@@ -1,5 +1,7 @@
 FROM node:20-alpine AS builder
 
+USER node:node
+
 RUN npm i -g npm
 
 RUN npm i -g vite
@@ -16,7 +18,7 @@ COPY ./repos/portfolio-svelte .
 
 RUN npm run build
 
-FROM node:18-alpine
+FROM node:20-alpine
 
 USER node:node
 
