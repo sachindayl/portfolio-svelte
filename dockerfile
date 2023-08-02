@@ -1,7 +1,5 @@
 FROM node:20-alpine AS builder
 
-USER node:node
-
 RUN npm i -g npm
 
 RUN npm i -g vite
@@ -9,8 +7,6 @@ RUN npm i -g vite
 WORKDIR /app
 
 COPY ./repos/portfolio-svelte/package.json ./
-
-RUN npm install
 
 RUN npm ci
 
