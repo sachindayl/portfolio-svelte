@@ -40,15 +40,10 @@ P
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-B
-docker-compose.yml,3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a
 @
 svelte.config.js,9/4/9412e23d6c9b081f2298258aff5115cc43e3308e
 =
 .dockerignore,0/5/05a721ebe3ba0754116825ed1359ff1785f4bbac
-:
-
-dockerfile,5/5/558c49b604560afd1841f2a7b49e2f60bd1f99b3
 >
 vite.config.ts,7/5/75ea7f3ea6d80d54bb5b2357996972d1632a5038
 <
@@ -57,3 +52,11 @@ P
  static/assets/images/android.svg,8/5/8528b1344ca696c51ab8e5cd229618b43cc988a4
 M
 static/assets/images/blob.svg,c/5/c583498315c8006fd5fd7d1c9411e1b0e6250cb3
+F
+src/models/ProjectI.ts,d/5/d542913bfc0d2594874f05a017fcf7b6ef67d57a
+I
+src/routes/+layout.svelte,5/7/57bd45b2d1884d7c824dd9391c6e95fe5ea8b351
+E
+src/views/Hero.svelte,b/0/b0cf641a1f48be1d1b03ab750a92ed6621dca655
+A
+package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
