@@ -2,7 +2,11 @@ FROM node:18-alpine AS builder
 
 RUN npm i -g npm
 
-RUN npm config set registry https://registry.npmjs.org/
+RUN npm config delete proxy
+
+RUN npm config delete http-proxy
+
+RUN npm config delete https-proxy
 
 RUN npm i -g vite
 
