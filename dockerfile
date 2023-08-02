@@ -2,6 +2,8 @@ FROM node:18-alpine AS builder
 
 RUN npm i -g npm
 
+RUN npm config set registry http://registry.npmjs.org/
+
 RUN npm i -g vite
 
 WORKDIR /app
