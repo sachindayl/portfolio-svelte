@@ -8,6 +8,8 @@ WORKDIR /app
 
 COPY ./repos/portfolio-svelte/package.json ./
 
+COPY ./repos/portfolio-svelte/package-lock.json ./
+
 RUN npm ci
 
 COPY ./repos/portfolio-svelte .
