@@ -1,12 +1,6 @@
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 
 RUN npm i -g npm
-
-RUN npm config delete proxy
-
-RUN npm config delete http-proxy
-
-RUN npm config delete https-proxy
 
 RUN npm i -g vite
 
