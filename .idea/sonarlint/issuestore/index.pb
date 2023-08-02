@@ -58,5 +58,3 @@ I
 src/routes/+layout.svelte,5/7/57bd45b2d1884d7c824dd9391c6e95fe5ea8b351
 E
 src/views/Hero.svelte,b/0/b0cf641a1f48be1d1b03ab750a92ed6621dca655
-A
-package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
