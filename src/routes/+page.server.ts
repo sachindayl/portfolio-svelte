@@ -7,6 +7,13 @@ export const load = (() => {
 	return {
 		projects: [
 			{
+				name: 'Ergo Stats',
+				description:
+					'Ergo Stats is an Android application designed to provide real-time statistics and emissions data for the Ergo blockchain, offering users an accessible and comprehensive view of the network\'s performance and environmental impact.',
+				tools: ['Android SDK', 'Jetpack Compose'],
+				image: "ergostats.png"
+			},
+			{
 				name: 'Buonappe',
 				description:
 					'Buonappe is a multi-user app built with Flutter designed for restaurants. It streamlines operations by allowing cooks, managers, and drivers to collaborate in real-time, improving efficiency and productivity.',

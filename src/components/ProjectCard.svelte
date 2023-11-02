@@ -37,7 +37,7 @@
 	>
 		<div class="rounded-2xl bg-teal-600 w-2/3 h-1/4 md:w-3/4 md:h-3/4 p-4 shadow-2xl">
 			<img
-				class="object-cover"
+				class="object-fit mx-auto h-[300px]"
 				src="assets/images/{project.image}"
 				alt="phone"
 			/>
