@@ -1,4 +1,6 @@
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
+
+RUN npm i -g npm
 
 RUN npm i -g vite
 
@@ -6,7 +8,7 @@ WORKDIR /app
 
 COPY ./repos/portfolio-svelte/package.json ./
 
-RUN npm install
+COPY ./repos/portfolio-svelte/package-lock.json ./
 
 RUN npm ci
 
@@ -14,7 +16,7 @@ COPY ./repos/portfolio-svelte .
 
 RUN npm run build
 
-FROM node:18-alpine
+FROM node:20-alpine
 
 USER node:node
 
