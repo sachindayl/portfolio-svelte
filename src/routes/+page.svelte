@@ -8,13 +8,17 @@
 	import type { ExperienceI } from '../models/ExperienceI';
 	import AOS from 'aos';
 	import { browser } from "$app/environment";
+	import type { ProjectI } from "../models/ProjectI";
+	import type { ToolI } from "../models/ToolI";
 
 	if (browser) {
 		AOS.init();
 	}
 
 	export let data: PageServerData;
-	let experienceData: [ExperienceI] = data.resume as [ExperienceI];
+	let projects = data.projects as [ProjectI]
+	let tools = data.tools as [ToolI]
+	let experienceData = data.resume as [ExperienceI];
 </script>
 
 <svelte:head>
@@ -24,10 +28,10 @@
 		content="Crafting Digital Solutions for Mobile and Web: Explore the Portfolio of a Skilled Developer based in Toronto. I work on iOS, Android and Flutter projects."
 	/>
 </svelte:head>
-<div class="h-screen">
+<div class="h-screen bg-white dark:bg-teal-950">
 	<NavBar />
 	<Hero />
-	<Projects projects={data.projects} />
-	<Tools toolsList={data.tools} />
+	<Projects projects={projects} />
+	<Tools toolsList={tools} />
 	<Resume resumeItemsList={experienceData} />
 </div>

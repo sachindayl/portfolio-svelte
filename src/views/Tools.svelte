@@ -6,7 +6,7 @@
 	export let toolsList: [ToolI];
 </script>
 
-<div use:scrollRef={'tools'} class="md:h-3/5 bg-teal-800 w-full">
+<div use:scrollRef={'tools'} class="md:h-3/5 bg-teal-800 dark:bg-teal-950 w-full">
 	<div class="flex flex-col md:flex-row justify-between h-full w-full lg:p-16">
 		<div class="flex flex-col lg:flex-row justify-center items-center">
 			<div

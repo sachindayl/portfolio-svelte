@@ -85,3 +85,15 @@ G
 :
 
 dockerfile,5/5/558c49b604560afd1841f2a7b49e2f60bd1f99b3
+Q
+!src/components/ProjectCard.svelte,8/6/867e662c56dd67a28c2c41f44786827bc7066266
+L
+src/components/NavBar.svelte,8/5/85f7d4bf9661fb6fd37faa1e50cf13121939a2e1
+R
+"static/assets/images/blob-dark.svg,7/d/7d077c50ca2ccf64622b422d00136dd7c0ed2615
+L
+src/components/Switch.svelte,0/6/069e5231357afbffaca083a8f1be4c59f5072c6c
+S
+#src/lib/assets/images/blob-dark.svg,5/6/565ee76969949b69a5a2236a5caf5f775b7b4051
+N
+src/lib/assets/images/blob.svg,a/6/a6118baaa3d3629092fd5bbccba15532db68f56d
