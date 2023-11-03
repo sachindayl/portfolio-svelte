@@ -1,16 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
-
-	// Define the theme options and the storage key
-	const THEMES = {
-		DARK: 'dark',
-		LIGHT: 'light'
-	};
-	const STORAGE_KEY = 'theme';
-
-	// Create a writable store to hold the current theme
-	export const theme = writable(THEMES.LIGHT);
+	import { svelteStoreTheme } from "../stores/stores";
+	import { STORAGE_KEY, THEMES } from "../config/Constants";
 
   let isInitialModeDark = false;
 
@@ -26,14 +17,14 @@
 
 	// A function to toggle the theme and save it to localStorage
 	const toggleTheme = () => {
-		let currentTheme = $theme;
+		let currentTheme = $svelteStoreTheme;
 		let newTheme;
 		if (currentTheme === THEMES.DARK) {
 			newTheme = THEMES.LIGHT;
 		} else {
 			newTheme = THEMES.DARK;
 		}
-		theme.set(newTheme);
+		svelteStoreTheme.set(newTheme);
 		localStorage.setItem(STORAGE_KEY, newTheme);
 		applyTheme(newTheme);
 	};
@@ -52,11 +43,11 @@
 	onMount(() => {
 		let initialTheme = getTheme();
     isInitialModeDark = initialTheme === THEMES.DARK;
-		theme.set(initialTheme);
+		svelteStoreTheme.set(initialTheme);
 		applyTheme(initialTheme);
 		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
 			let updatedTheme = getTheme();
-			theme.set(updatedTheme);
+			svelteStoreTheme.set(updatedTheme);
 			applyTheme(updatedTheme);
 		});
 	});

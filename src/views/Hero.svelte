@@ -1,35 +1,14 @@
 <script lang="ts">
-	import myImage from '$lib/assets/images/me.png?h=360&w=720&webp';
-	import { scrollRef } from 'svelte-scrolling';
-	import { browser } from '$app/environment';
+	import myImage from "$lib/assets/images/me.png?h=360&w=720&webp";
+	import { scrollRef } from "svelte-scrolling";
+	import { svelteStoreTheme } from "../stores/stores";
+	import { THEMES } from "../config/Constants";
 
-	const STORAGE_KEY = 'theme';
-	const THEMES = {
-		LIGHT: 'light',
-		DARK: 'dark'
-	};
+	let storedTheme = THEMES.LIGHT;
+	$: themeChanged = storedTheme
+	svelteStoreTheme.subscribe((changedTheme) => storedTheme = changedTheme)
+	$: blob = storedTheme === THEMES.DARK ? 'assets/images/blob-dark.svg' : 'assets/images/blob.svg';
 
-	$: storageTheme = localStorage.getItem(STORAGE_KEY)
-
-	$: getTheme = () => {
-		if (browser) {
-			let storedTheme = storageTheme ?? THEMES.LIGHT;
-			if (storedTheme) {
-				return storedTheme;
-			}
-			let prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-			return prefersDark ? THEMES.DARK : THEMES.LIGHT;
-		} else {
-			return THEMES.LIGHT;
-		}
-	}
-
-	// $: theme =
-	// 	browser && getThe;
-	//
-	// $: blob = getTheme() === THEMES.DARK ? 'assets/images/blob-dark.svg' : 'assets/images/blob.svg';
-	$: isDarkTheme = getTheme() === THEMES.DARK;
-	console.log(isDarkTheme);
 </script>
 
 <div
@@ -71,25 +50,11 @@
 			</div>
 		</div>
 		<div class="animate__animated animate__zoomIn flex-1 relative w-full p-16 md:p-8">
-			{#if isDarkTheme}
-				<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-					<path
-						fill="#134e4a"
-						d="M32.5,-39.7C41.7,-31,48.4,-20.4,49.7,-9.3C51,1.7,46.8,13.1,40.4,22.6C34.1,32,25.5,39.4,13.1,49.9C0.7,60.5,-15.7,74.2,-31.8,74.1C-47.9,74,-63.8,60,-71.7,43C-79.7,26,-79.7,6,-76.2,-13.3C-72.7,-32.6,-65.6,-51.2,-52.3,-59.2C-39,-67.2,-19.5,-64.5,-3.9,-59.8C11.6,-55.1,23.3,-48.3,32.5,-39.7Z"
-						transform="translate(100 100)"
-					/>
-				</svg>
-			{/if}
-
-			{#if !isDarkTheme}
-				<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-					<path
-						fill="#08BDBA"
-						d="M32.5,-39.7C41.7,-31,48.4,-20.4,49.7,-9.3C51,1.7,46.8,13.1,40.4,22.6C34.1,32,25.5,39.4,13.1,49.9C0.7,60.5,-15.7,74.2,-31.8,74.1C-47.9,74,-63.8,60,-71.7,43C-79.7,26,-79.7,6,-76.2,-13.3C-72.7,-32.6,-65.6,-51.2,-52.3,-59.2C-39,-67.2,-19.5,-64.5,-3.9,-59.8C11.6,-55.1,23.3,-48.3,32.5,-39.7Z"
-						transform="translate(100 100)"
-					/>
-				</svg>
-			{/if}
+			<img
+				src={blob}
+				class="w-64 md:w-5/6 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+				alt="blob"
+			/>
 
 			<img
 				src={myImage}
