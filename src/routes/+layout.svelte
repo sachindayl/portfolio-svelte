@@ -2,4 +2,7 @@
 	import '../app.css';
 </script>
 
-<slot />
+<div class="bg-white dark:bg-teal-950 h-screen">
+  <slot />
+</div>
+

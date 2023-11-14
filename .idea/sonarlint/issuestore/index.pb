@@ -93,11 +93,25 @@ R
 "static/assets/images/blob-dark.svg,7/d/7d077c50ca2ccf64622b422d00136dd7c0ed2615
 L
 src/components/Switch.svelte,0/6/069e5231357afbffaca083a8f1be4c59f5072c6c
-S
-#src/lib/assets/images/blob-dark.svg,5/6/565ee76969949b69a5a2236a5caf5f775b7b4051
-N
-src/lib/assets/images/blob.svg,a/6/a6118baaa3d3629092fd5bbccba15532db68f56d
 D
 src/stores/stores.ts,3/4/34aa029c9c123c1273a0d0847e82e06960623e47
 G
 src/config/Constants.ts,f/6/f6d3b6b327c1417d8953da0ad89c7d444e684902
+O
+src/routes/pricing/+page.svelte,a/d/adf654de8b2fe8b6df9da9f1ffb1c2f2f2cda2ed
+R
+"src/routes/pricing/+page.server.ts,6/e/6ef715c19ee7d2f70477f0aee11904fa74fb32f3
+Q
+!src/components/NavBarOther.svelte,9/2/92d87fb137334c1c9175d37df27f54015e1e7719
+O
+src/components/PriceCard.svelte,d/a/daf055ec68fec009cb6af9b500a195c8e09e9087
+Q
+!src/components/PackageCard.svelte,3/7/37fa434ca4805f46989d77f8427a9e15722703c0
+F
+src/models/PackageI.ts,a/1/a1d85755f59fd1a705c2a7e348c727b00ac202ee
+M
+src/models/PackagePricingI.ts,e/c/ecadbb860a1eb56c4be5c66a64eb5cde58a23112
+S
+#src/routes/packages/+page.server.ts,3/3/33b4913253c8da8e76e6f6910561020ba8ba33f8
+P
+ src/routes/packages/+page.svelte,8/2/828e1814aa58ba64b80eec4733ef7328ebcacc88
