@@ -14,7 +14,7 @@ RUN npm ci
 
 COPY ./repos/portfolio-svelte .
 
-RUN npm run check
+RUN npm run sync
 
 RUN npm run build
 
