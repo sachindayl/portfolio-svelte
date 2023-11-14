@@ -14,6 +14,8 @@ RUN npm ci
 
 COPY ./repos/portfolio-svelte .
 
+RUN npm run check
+
 RUN npm run build
 
 FROM node:20-alpine
