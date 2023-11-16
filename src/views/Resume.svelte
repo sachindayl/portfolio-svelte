@@ -17,13 +17,12 @@
 	}
 </script>
 
-<div
-	data-aos="fade-up"
-	data-aos-anchor-placement="top-center"
-	use:scrollRef={'resume'}
-	class="mx-auto w-full p-3 md:p-16 bg-white dark:bg-teal-950"
->
+<div use:scrollRef={'resume'} class="mx-auto w-full p-3 md:p-16 bg-white dark:bg-teal-950">
 	<div
+  	data-aos="fade-up"
+  >
+     <div
+
 		class="flex justify-center w-full pb-1 pt-4 md:pt-0 text-4xl md:text-5xl font-semibold text-black dark:text-white"
 	>
 		Resume
@@ -37,7 +36,7 @@
 		{#if isVisible}
 			<div
 				class="p-4 md:p-16 rounded-2xl border border-teal-600 dark:border-gray-600 shadow-lg shadow-teal-600 dark:shadow-gray-600 bg-white dark:bg-teal-900"
-transition:fade={{ duration: 400 }}
+				transition:fade={{ duration: 400 }}
 			>
 				<ol class="flex flex-col justify-center border-l-2 border-teal-600">
 					{#each resumeItemsList as item, i (item)}
@@ -64,6 +63,8 @@ transition:fade={{ duration: 400 }}
 			</div>
 		{/if}
 	{/key}
+  </div>
+
 	<!--	<div class="flex justify-center pt-16">-->
 	<!--		<button-->
 	<!--			type="button"-->
